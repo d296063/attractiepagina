@@ -180,7 +180,7 @@ th {
 
 /*---------------------cards----------------*/
 
-.cards{
+.cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
@@ -188,31 +188,43 @@ th {
 
 
 /*--------------------card-------------------*/
-.card{
+.card {
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 4px 4px #8888882d;
   overflow: hidden;
 }
-.card .background{
+
+.card .background {
   height: 170px;
   background-size: cover;
   background-position: center;
 }
-.card h2{
+
+.card h2 {
   font-size: 0.8rem;
   color: rgb(167, 167, 167);
   text-transform: uppercase;
   margin-bottom: 0;
 }
-.card h3{
+
+.card h3 {
   font-size: 2rem;
   margin: 0;
 }
-.length{
-  color:rgb(167, 167, 167)
+
+.length {
+  color: rgb(167, 167, 167)
 }
 
+.fastpass {
+  grid-column: span 2;
+}
+
+.fpinfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
 
 /* ==========================================================================

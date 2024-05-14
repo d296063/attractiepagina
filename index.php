@@ -43,6 +43,25 @@ require_once 'admin/backend/config.php';
         </main>
     </div>
 
+    <div class="card fastpas">
+        <div class="background" style="background-image:url('img/attracties/adger-kang-oiyzr-SgjBY-unsplash.jpg">
+        </div>
+        <div class="fpinfo">
+            <div class="cardinfo">
+                2>adventureland</h2>
+                <h3>speedyxl</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda odit totam libero maiores possimus incidunt quibusdam suscipit? Suscipit debitis dolore dicta dignissimos repellendus quod eos dolores autem perferendis incidunt. Sint.</p>
+                <p class="length"> 120 cm minimale lengte</p>
+            </div>
+            <div class="cardinfo">
+                <p>deze attractie is alleen te bezoeken met een fastpass</p>
+                <p>boek nu en sla de wachtrij over</p>
+                <button><img src="img/Ticket.png" alt=""> fastpass</button>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 
 </html>
