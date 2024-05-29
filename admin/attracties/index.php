@@ -1,8 +1,7 @@
 <?php
 session_start();
 require_once '../backend/config.php';
-if(!isset($_SESSION['user_id']))
-{
+if (!isset($_SESSION['user_id'])) {
     $msg = "Je moet eerst inloggen!";
     header("Location: $base_url/admin/login.php?msg=$msg");
     exit;
@@ -45,13 +44,19 @@ if(!isset($_SESSION['user_id']))
                 <th>Min. lengte</th>
                 <th>Fastpass</th>
             </tr>
-            <?php foreach($rides as $ride): ?>
+            <?php foreach ($rides as $ride) : ?>
                 <tr>
-                    <td><?php echo $ride['title']; ?></td>
-                    <td><?php echo $ride['themeland']; ?></td>
-                    <td><?php echo $ride['min_length']; ?></td>
-                    <td><?php echo $ride['fast_pass']; ?></td>
-                    <td><a href="edit.php?id=<?php echo $ride['id']; ?>">aanpassen</a></td>
+                    <td><?php echo htmlspecialchars($ride['title'] ?? ''); ?></td>
+                    <td><?php echo ucfirst(htmlspecialchars($ride['themeland'] ?? '')); ?></td>
+                    <td>
+                        <?php
+                        echo isset($ride['min_length']) && $ride['min_length'] !== null
+                            ? htmlspecialchars($ride['min_length']) . ' centimeter'
+                            : 'Geen minimale lengte';
+                        ?>
+                    </td>
+                    <td><?php echo ($ride['fast_pass'] ?? 0) ? 'Ja' : 'Nee'; ?></td>
+                    <td><a href="edit.php?id=<?php echo htmlspecialchars($ride['id'] ?? ''); ?>">aanpassen</a></td>
                 </tr>
             <?php endforeach; ?>
         </table>
